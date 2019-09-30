@@ -4,7 +4,7 @@ git clone https://github.com/kiam001/android_kernel_motorola_msm8937 kernel/moto
 git clone https://github.com/kiam001/packages_resources_MotoActions packages/resources/MotoActions
 echo "What is rom are you building this is for .mk files so see what is required:"
 read rom
-devicedir=device/motorola/cedirc
+devicedir=device/motorola/cedric
 cd $devicedir
 mv aosp_cedric".mk" $rom"_"cedric".mk"
 newmk=$rom"_"cedic".mk"
