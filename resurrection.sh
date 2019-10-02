@@ -3,3 +3,7 @@ git clone https://github.com/kiam001/android_vendor_motorola_cedric vendor/motor
 git clone https://github.com/kiam001/android_kernel_motorola_msm8937 kernel/motorola/msm8937
 git clone https://github.com/kiam001/packages_resources_MotoActions packages/resources/MotoActions
 git clone https://github.com/kiam001/android_system_qcom system/qcom
+repo init -u https://github.com/ResurrectionRemix/platform_manifest.git -b pie
+repo sync -f --force-sync --no-clone-bundle
+. build/envsetup.sh && brunch cedric
+echo done
