@@ -5,4 +5,7 @@ repo init -u https://github.com/Halium/android -b halium-7.1 --depth=1
 repo sync -c -j 16
 source build/envsetup.sh
 breakfast cedric
+mka mkbootimg
+mka hybris-boot
+mka systemimage
 echo done
