@@ -6,6 +6,6 @@ repo sync -c -j 16
 source build/envsetup.sh
 breakfast cedric
 mka mkbootimg
-mka hybris-boot
+mka halium-boot
 mka systemimage
 echo done
