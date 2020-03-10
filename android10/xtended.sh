@@ -1,5 +1,5 @@
 #!/bin/bash
-touch PROZESSRUNNING
+touch PROCESSRUNNING
 mkdir xtended
 cd xtended
 repo init -u https://github.com/Project-Xtended/manifest.git -b r31
@@ -12,5 +12,5 @@ make xtended -j$(nproc --all)
 # scp /home/maik/build/xtended/out/target/product/cedric/Xtended-cedric-UNOFFICIAL-* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cd ../
 rm -rf xtended
-rm PROZESSRUNNING
+rm PROCESSRUNNING
 echo done
