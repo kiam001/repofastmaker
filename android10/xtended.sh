@@ -1,5 +1,6 @@
 #!/bin/bash
 touch PROCESSRUNNING
+mkdir -p builds
 mkdir xtended
 cd xtended
 repo init -u https://github.com/Project-Xtended/manifest.git -b r31
@@ -10,6 +11,7 @@ lunch xtended_cedric-userdebug
 make xtended -j$(nproc --all)
 # Commented out because most users will not need autoupload
 # scp /home/maik/build/xtended/out/target/product/cedric/Xtended-cedric-UNOFFICIAL-* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
+cp out/target/product/Cedric/Xtended-cedric-UNOFFICAL-* ../builds
 cd ../
 rm -rf xtended
 rm PROCESSRUNNING
