@@ -1,3 +1,4 @@
+touch PROZESSRUNNING
 mkdir xtended
 cd xtended
 repo init -u https://github.com/Project-Xtended/manifest.git -b r31
@@ -7,4 +8,7 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 lunch xtended_cedric-userdebug
 make xtended -j4
 scp /home/maik/build/xtended/out/target/product/cedric/Xtended-cedric-UNOFFICIAL-* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
+cd ../
+rm -rf xtended
+rm PROZESSRUNNING
 echo done
