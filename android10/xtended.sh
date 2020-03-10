@@ -1,3 +1,4 @@
+#!/bin/bash
 touch PROZESSRUNNING
 mkdir xtended
 cd xtended
