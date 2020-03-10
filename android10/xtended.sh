@@ -8,7 +8,7 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 lunch xtended_cedric-userdebug
 make xtended -j$(nproc --all)
-# Commented out becaise most users will not need autoupload
+# Commented out because most users will not need autoupload
 # scp /home/maik/build/xtended/out/target/product/cedric/Xtended-cedric-UNOFFICIAL-* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cd ../
 rm -rf xtended
