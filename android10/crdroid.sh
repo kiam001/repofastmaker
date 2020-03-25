@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/Sohamlad7/android_development_manifest/lo
 cd ../../
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
-brunch
+brunch cedric
 scp out/target/product/cedric/crDroidAndroid-10.0* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cp out/target/product/cedric/crDroidAndroid-10.0* ../builds
 cd ../
