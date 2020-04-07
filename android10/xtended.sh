@@ -9,8 +9,8 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 lunch xtended_cedric-userdebug
 make xtended -j$(nproc --all)
-scp out/target/product/cedric/Xtended-cedric-UNOFFICIAL-* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
-cp out/target/product/cedric/Xtended-cedric-UNOFFICAL-* ../builds
+scp out/target/product/cedric/Xtended* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
+cp out/target/product/cedric/Xtended* ../builds
 cd ../
 rm -rf xtended
 rm PROCESSRUNNING
