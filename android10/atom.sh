@@ -2,6 +2,8 @@
 mkdir ~/bin
 PATH=~/bin:$PATH
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+git config --global user.name "kiam001"
+git config --global user.email "blablatupfen@gmail.com"
 chmod a+x ~/bin/repo
 touch PROCESSRUNNING
 mkdir -p builds
