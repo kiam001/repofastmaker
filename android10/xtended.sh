@@ -9,7 +9,7 @@ touch PROCESSRUNNING
 mkdir -p builds
 mkdir xtended
 cd xtended
-repo init -u https://github.com/Project-Xtended/manifest.git -b r31 --depth=1
+repo init -u https://github.com/Project-Xtended/manifest.git -b r31
 git clone https://github.com/kiam001/Offical_Xtended_.repo_local_manifests .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh

@@ -9,7 +9,7 @@ touch PROCESSRUNNING
 mkdir -p builds
 mkdir pe
 cd pe
-repo init -u https://github.com/PixelExperience/manifest -b ten --depth=1
+repo init -u https://github.com/PixelExperience/manifest -b ten
 git clone https://github.com/kiam001/PixelExperience_.repo_local_manifests .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh

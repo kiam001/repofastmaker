@@ -9,7 +9,7 @@ touch PROCESSRUNNING
 mkdir -p builds
 mkdir atom
 cd atom
-repo init -u https://github.com/AtomOrganization/manifest -b ten --depth=1
+repo init -u https://github.com/AtomOrganization/manifest -b ten
 git clone https://github.com/AtomOrganization/cerdic_official .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
