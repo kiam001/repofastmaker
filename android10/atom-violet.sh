@@ -26,6 +26,6 @@ mka bacon -j$(nproc --all)
 scp out/target/product/violet/Atom* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Violet\ Redmi\ Note\ 7\ Pro"
 cp out/target/product/violet/Atom* ../builds
 cd ../
-#rm -rf atom
+rm -rf atom
 rm PROCESSRUNNING
 echo done
