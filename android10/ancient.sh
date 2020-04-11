@@ -18,6 +18,6 @@ mka bacon -j$(nproc --all)
 scp out/target/product/cedric/Ancient* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cp out/target/product/cedric/Ancient* ../builds
 cd ../
-#rm -rf ancient
+rm -rf ancient
 rm PROCESSRUNNING
 echo done
