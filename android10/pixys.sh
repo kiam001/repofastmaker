@@ -18,6 +18,6 @@ make pixys -j$(nproc --all)
 scp out/target/product/cedric/Pixys* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cp out/target/product/cedric/Pixys* ../builds
 cd ../
-#rm -rf pixys
+rm -rf pixys
 rm PROCESSRUNNING
 echo done
