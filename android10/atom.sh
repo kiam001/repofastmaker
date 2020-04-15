@@ -10,7 +10,7 @@ mkdir -p builds
 mkdir atom
 cd atom
 repo init -u https://github.com/AtomOrganization/manifest -b ten
-git clone https://github.com/AtomOrganization/cerdic_official .repo/local_manifests
+git clone https://github.com/AtomOrganization/cedric_official .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 lunch aosp_cedric-userdebug
