@@ -10,7 +10,7 @@ mkdir -p builds
 mkdir cygnus
 cd cygnus
 repo init -u https://github.com/cygnus-rom/manifest.git -b caf-ten
-git clone https://github.com/kiam001/cygnus_.repo_local_manifests .repo/local_manifests
+git clone https://github.com/kiam001/all10_.repo_local_manifests -b cygnus .repo/local_manifests
 repo sync -j$(nproc --all) --force-sync --no-tags --no-clone-bundle --prune --optimized-fetch
 repo forall -c git lfs pull
 . build/envsetup.sh
@@ -19,7 +19,7 @@ mka cygnus
 scp out/target/product/cedric/Cygnus* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cp out/target/product/cedric/Cygnus* ../builds
 cd ../
-#rm -rf cygnus
+rm -rf cygnus
 rm PROCESSRUNNING
 echo done
 

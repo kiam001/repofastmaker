@@ -10,7 +10,7 @@ mkdir -p builds
 mkdir ancient
 cd ancient
 repo init -u https://github.com/Ancient-Lab/manifest -b ten
-git clone https://github.com/kiam001/Ancient_.repo_local_manifests .repo/local_manifests
+git clone https://github.com/kiam001/all10_.repo_local_manifests -b ancient .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 lunch ancient_cedric-userdebug

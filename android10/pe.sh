@@ -10,7 +10,7 @@ mkdir -p builds
 mkdir pe
 cd pe
 repo init -u https://github.com/PixelExperience/manifest -b ten
-git clone https://github.com/kiam001/PixelExperience_.repo_local_manifests .repo/local_manifests
+git clone https://github.com/kiam001/all10_.repo_local_manifests -b pe .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 lunch aosp_cedric-userdebug
