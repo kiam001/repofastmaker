@@ -18,6 +18,6 @@ mka bacon -j$(nproc --all)
 scp out/target/product/cedric/Havoc* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cp out/target/product/cedric/Havoc* ../builds
 cd ../
-#rm -rf havoc
+rm -rf havoc
 rm PROCESSRUNNING
 echo done
