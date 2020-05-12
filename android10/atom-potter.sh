@@ -9,7 +9,7 @@ touch PROCESSRUNNING
 mkdir -p builds
 mkdir atom
 cd atom
-repo init -u https://github.com/AtomOrganization/manifest -b ten
+repo init -u https://github.com/AtomOrganization/manifest -b ten --depth=1
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 git clone https://github.com/LineageOS/android_system_qcom.git -b lineage-17.0 system/qcom
 git clone https://github.com/richieflicker/packages_resources_MotoActions -b action packages/resources/MotoActions

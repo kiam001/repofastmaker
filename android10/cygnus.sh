@@ -9,7 +9,7 @@ touch PROCESSRUNNING
 mkdir -p builds
 mkdir cygnus
 cd cygnus
-repo init -u https://github.com/cygnus-rom/manifest.git -b caf-ten
+repo init -u https://github.com/cygnus-rom/manifest.git -b caf-ten --depth=1
 git clone https://github.com/kiam001/all10_.repo_local_manifests -b cygnus .repo/local_manifests
 repo sync -j$(nproc --all) --force-sync --no-tags --no-clone-bundle --prune --optimized-fetch
 repo forall -c git lfs pull

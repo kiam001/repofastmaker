@@ -9,7 +9,7 @@ touch PROCESSRUNNING
 mkdir -p builds
 mkdir havoc
 cd havoc
-repo init -u https://github.com/Havoc-OS/android_manifest.git -b ten
+repo init -u https://github.com/Havoc-OS/android_manifest.git -b ten --depth=1
 git clone https://github.com/kiam001/all10_.repo_local_manifests -b havoc .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh

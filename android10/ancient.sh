@@ -9,7 +9,7 @@ touch PROCESSRUNNING
 mkdir -p builds
 mkdir ancient
 cd ancient
-repo init -u https://github.com/Ancient-Lab/manifest -b ten
+repo init -u https://github.com/Ancient-Lab/manifest -b ten --depth=1
 git clone https://github.com/kiam001/all10_.repo_local_manifests -b ancient .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh

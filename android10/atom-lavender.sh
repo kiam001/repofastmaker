@@ -9,7 +9,7 @@ touch PROCESSRUNNING
 mkdir -p builds
 mkdir atom
 cd atom
-repo init -u https://github.com/AtomOrganization/manifest -b ten
+repo init -u https://github.com/AtomOrganization/manifest -b ten --depth=1
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 git clone https://github.com/AtomOrgDevice/device_xiaomi_lavender.git -b ten-test device/xiaomi/lavender
 git clone https://github.com/stormbreaker-project/kernel_xiaomi_lavender -b old-cam kernel/xiaomi/lavender

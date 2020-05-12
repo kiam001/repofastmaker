@@ -9,7 +9,7 @@ touch PROCESSRUNNING
 mkdir -p builds
 mkdir atom
 cd atom
-repo init -u https://github.com/AtomOrganization/manifest -b ten
+repo init -u https://github.com/AtomOrganization/manifest -b ten --depth=1
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 git clone https://github.com/kiam001/android_device_xiaomi_violet device/xiaomi/violet
 git clone --depth 1 https://github.com/tesla59/hydra_kernel kernel/xiaomi/sm6150

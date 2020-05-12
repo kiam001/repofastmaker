@@ -9,7 +9,7 @@ touch PROCESSRUNNING
 mkdir -p builds
 mkdir crdroid
 cd crdroid
-repo init -u git://github.com/crdroidandroid/android.git -b 10.0
+repo init -u git://github.com/crdroidandroid/android.git -b 10.0 --depth=1
 mkdir .repo/local_manifests
 cd .repo/local_manifests
 wget https://raw.githubusercontent.com/Sohamlad7/android_development_manifest/local_manifests/lineage-17.1.xml
