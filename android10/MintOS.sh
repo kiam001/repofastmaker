@@ -1,4 +1,5 @@
 #!/bin/bash
+export CCACHE_EXEC=/usr/bin/ccache
 mkdir ~/bin
 PATH=~/bin:$PATH
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
