@@ -27,9 +27,7 @@ scp out/target/product/cedric/lineage-17.1*.zip "kiam001@frs.sourceforge.net:/ho
 cp out/target/product/cedric/lineage-17.1*.zip ../builds
 cd ../MintOS
 git pull
-make ota > device/cedric.json
-git add device/cedric.json
-git commit -m "Cedric: push new OTA"
+make ota
 git push
 cd ..
 rm -rf lineage-17.1
