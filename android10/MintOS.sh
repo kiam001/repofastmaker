@@ -25,10 +25,10 @@ cd ../lineage-17.1
 lunch lineage_cedric-userdebug
 brunch cedric
 scp out/target/product/cedric/lineage-17.1*.zip "kiam001@frs.sourceforge.net:/home/frs/project/mint-os-project/"
-cp out/target/product/cedric/lineage-17.1*.zip ../builds
+cp out/target/product/cedric/lineage-17.1*.zip out/target/product/cedric/ota_metadata ../builds
 cd ../MintOS
 git pull
-make ota
+make genota
 git push
 cd ..
 rm -rf lineage-17.1
