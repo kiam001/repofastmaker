@@ -15,9 +15,12 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 lunch ancient_cedric-userdebug
 mka bacon -j$(nproc --all)
-scp out/target/product/cedric/Ancient* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
+scp out/target/product/cedric/Ancient-*.zip "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cp out/target/product/cedric/Ancient* ../builds
 cd ../
+chmod +x mkota-wrapper.sh
+./mkota-wrapper.sh ancient/out/target/product/cedric/Ancient-*.zip anicent/out/target/product/cedric/ota_metadata ancient `(cd anicent/out/target/product/cedric && ls Ancient-*.zip)`
+
 rm -rf ancient
 rm PROCESSRUNNING
 echo done
