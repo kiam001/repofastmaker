@@ -11,7 +11,7 @@ mkdir -p builds
 mkdir lineage-17.1
 git clone git@github.com:nift4/Mint-OS.git MintOS
 cd lineage-17.1
-repo init -u git://github.com/LineageOS/android.git -b lineage-17.1
+repo init -u git://github.com/LineageOS/android.git -b lineage-17.1 --depth=1
 cd ../MintOS
 make setup MINTOS_DIR=../lineage-17.1 MINTOS_DEVICE=cedric
 make prepare
