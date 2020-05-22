@@ -29,7 +29,7 @@ cp out/target/product/cedric/lineage-17.1*.zip out/target/product/cedric/ota_met
 cd ../MintOS
 git pull
 cd ../lineage-17.1/
-.build/make/tools/releasetools/ota_from_target_files  --block -i ../update/target_files_intermediates/lineage_cedric-target_files-eng.kiam001.zip out/target/product/cedric/obj/PACKAGING/target_files_intermediates/lineage_cedric-target_files-eng.kiam001.zip ../MintOS/incremental_$(date +"%Y_%m_%d_%I_%M_%p").zip
+build/make/tools/releasetools/ota_from_target_files  --block -i ../update/target_files_intermediates/lineage_cedric-target_files-eng.kiam001.zip out/target/product/cedric/obj/PACKAGING/target_files_intermediates/lineage_cedric-target_files-eng.kiam001.zip ../MintOS/incremental_$(date +"%Y_%m_%d_%I_%M_%p").zip
 cd ../MintOS
 scp incremental_*.zip kiam001@frs.sourceforge.net:/home/frs/project/mint-os-project/
 cp -r out/target/product/cedric/obj/PACKAGING/target_files_intermediates/ ../update
