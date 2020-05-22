@@ -36,7 +36,6 @@ cp -r out/target/product/cedric/obj/PACKAGING/target_files_intermediates/ ../upd
 ./mkota-wrapper.sh incremental_*.zip ../lineage-17.1/out/target/product/cedric/ota_metadata cedric `(ls incremental_*.zip)`
 git push
 rm incremental_*.zip
-scp ../lineage-17.1/out/target/product/cedric/obj/PACKAGING/target_files_intermediates/lineage_cedric-target_files-eng.kiam001.zip "kiam001@frs.sourceforge.net:/home/frs/project/mint-os-project/incremental/dontFLASH/"
 make genota
 git push
 cd ..
