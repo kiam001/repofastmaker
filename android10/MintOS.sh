@@ -9,6 +9,7 @@ git config --global user.email "blablatupfen@gmail.com"
 touch PROCESSRUNNING
 mkdir -p builds
 mkdir lineage-17.1
+mkdir incremental
 git clone git@github.com:nift4/Mint-OS.git MintOS
 cd lineage-17.1
 repo init -u git://github.com/LineageOS/android.git -b lineage-17.1 --depth=1
@@ -26,12 +27,21 @@ lunch lineage_cedric-userdebug
 brunch cedric
 scp out/target/product/cedric/lineage-17.1*.zip "kiam001@frs.sourceforge.net:/home/frs/project/mint-os-project/"
 cp out/target/product/cedric/lineage-17.1*.zip out/target/product/cedric/ota_metadata ../builds
+cp -r out/target/product/cedric/obj/PACKAGING/target_files_intermediates ../update
 cd ../MintOS
 git pull
+wget https://sourceforge.net/projects/mint-os-project/files/incremental/dontFLASH/lineage_cedric-target_files-eng.kiam001.zip/download
+../lineage-17.1/build/make/tools/releasetools/ota_from_target_files  --block -i lineage_cedric-target_files-eng.kiam001.zip ../lineage-17.1/out/target/product/cedric/obj/PACKAGING/target_files_intermediates/lineage_cedric-target_files-eng.kiam001.zip incremental_$(date +"%Y_%m_%d_%I_%M_%p").zip
+rm lineage_cedric-target_files-eng.kiam001.zip
+scp incremental_*.zip "kiam001@frs.sourceforge.net:/home/frs/project/mint-os-project/"
+./mkota-wrapper.sh incremental_*.zip ../lineage-17.1/out/target/product/cedric/ota_metadata cedric `(ls incremental_*.zip)`
+git push
+rm incremental_*.zip
+scp ../lineage-17.1/out/target/product/cedric/obj/PACKAGING/target_files_intermediates/lineage_cedric-target_files-eng.kiam001.zip "kiam001@frs.sourceforge.net:/home/frs/project/mint-os-project/incremental/dontFLASH/"
 make genota
 git push
 cd ..
-rm -rf lineage-17.1
-rm -rf MintOS
+#rm -rf lineage-17.1
+#rm -rf MintOS
 rm PROCESSRUNNING
 echo done
