@@ -14,11 +14,11 @@ git clone https://github.com/kiam001/all10_.repo_local_manifests -b pixysos .rep
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 lunch pixys_cedric-userdebug
-make pixys j$(nproc --all)
+make pixys -j$(nproc --all)
 
 scp out/target/product/cedric/PixysOS* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cp out/target/product/cedric/PixysOS* ../builds
 cd ../
-rm -rf pixysos
+#rm -rf pixysos
 rm PROCESSRUNNING
 echo done
