@@ -18,9 +18,6 @@ mka bacon -j$(nproc --all)
 scp out/target/product/cedric/AncientOS-*.zip "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cp out/target/product/cedric/Ancient* ../builds
 cd ../
-chmod +x mkota-wrapper.sh
-./mkota-wrapper.sh ancient/out/target/product/cedric/AncientOS-*.zip  ancient/out/target/product/cedric/ota_metadata ancient `(cd ancient/out/target/product/cedric && ls AncientOS-*.zip)`
-
 rm -rf ancient
 rm PROCESSRUNNING
 echo done
