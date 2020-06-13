@@ -10,10 +10,7 @@ mkdir -p builds
 mkdir crdroid
 cd crdroid
 repo init -u git://github.com/crdroidandroid/android.git -b 10.0 --depth=1
-mkdir .repo/local_manifests
-cd .repo/local_manifests
-wget https://raw.githubusercontent.com/Sohamlad7/android_development_manifest/local_manifests/lineage-17.1.xml
-cd ../../
+git clone https://github.com/kiam001/all10_.repo_local_manifests -b crdroid .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 brunch cedric
