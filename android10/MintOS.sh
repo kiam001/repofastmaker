@@ -19,7 +19,11 @@ cd ../lineage-17.1
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 cd ../MintOS
 git config apply.whitespace nowarn
-make patch
+git pull
+make patch > patch.log.txt
+git add patch.log.txt
+git commit -m "Add Patchlog"
+git push
 cd ../lineage-17.1
 . build/envsetup.sh
 lunch lineage_cedric-userdebug
