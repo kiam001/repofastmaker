@@ -15,6 +15,9 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 lunch du_cedric-userdebug
 make corvus
+scp out/target/product/cedric/Corvus* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
+cp out/target/product/cedric/Corvus* ../builds
+rm -rf out/target
 export USE_GAPPS=true
 make corvus
 scp out/target/product/cedric/Corvus* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
