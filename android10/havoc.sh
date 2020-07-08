@@ -14,6 +14,9 @@ git clone https://github.com/kiam001/all10_.repo_local_manifests -b havoc .repo/
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 brunch cedric
+scp out/target/product/cedric/Havoc* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
+cp out/target/product/cedric/Havoc* ../builds
+rm -rf out/target
 export WITH_GAPPS=true
 brunch cedric
 scp out/target/product/cedric/Havoc* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
