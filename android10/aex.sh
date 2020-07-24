@@ -14,13 +14,13 @@ git clone https://github.com/kiam001/all10_.repo_local_manifests -b aex .repo/lo
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 lunch aosp_cedric-userdebug
-mka bacon -j$(nproc --all)
+mka aex -j$(nproc --all)
 scp out/target/product/cedric/AospExtended* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cp out/target/product/cedric/AospExtended* ../builds
 rm -rf out/target
 export USE_GAPPS=true
 lunch aosp_cedric-userdebug
-mka bacon -j$(nproc --all)
+mka aex -j$(nproc --all)
 scp out/target/product/cedric/AospExtended* "kiam001@frs.sourceforge.net:/home/frs/project/kiam001-build-roms/Device\ Cedric\ \(Moto\ G5\)/android10"
 cp out/target/product/cedric/AospExtended* ../builds
 cd ../
