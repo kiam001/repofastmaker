@@ -28,7 +28,7 @@ cd ../lineage-17.1
 . build/envsetup.sh
 lunch lineage_cedric-userdebug
 brunch cedric
-scp out/target/product/cedric/lineage-17.1*.zip "kiam001@frs.sourceforge.net:/home/frs/project/mint-os-project/"
+scp out/target/product/cedric/lineage-17.1*.zip "kiam001@frs.sourceforge.net:/home/frs/project/motog5/MintOS/"
 cp out/target/product/cedric/lineage-17.1*.zip out/target/product/cedric/ota_metadata ../builds
 cd ../MintOS
 git pull
