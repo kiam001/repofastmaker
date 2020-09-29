@@ -19,19 +19,16 @@ cd ../lineage-17.1
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 cd ../MintOS
 git config apply.whitespace nowarn
-git pull
-make patch > patch.log.txt
+make patch > patch.log.txt 2>&1
 git add patch.log.txt
-git commit -m "Add Patchlog"
-git push
 cd ../lineage-17.1
 . build/envsetup.sh
 lunch lineage_cedric-userdebug
-brunch cedric
+brunch cedric > ../MintOS/build.log 2>&1
 scp out/target/product/cedric/lineage-17.1*.zip "kiam001@frs.sourceforge.net:/home/frs/project/motog5/MintOS/"
 cp out/target/product/cedric/lineage-17.1*.zip out/target/product/cedric/ota_metadata ../builds
 cd ../MintOS
-git pull
+git add build.log
 make genota
 git push
 cd ..
